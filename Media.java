@@ -13,7 +13,7 @@ public class Media {
     byte nota1, nota2, nota3, nota4;
 
     System.out.printf("Digite a 1º nota: ");
-    nota1 = ler.nextByte();
+    nota1 = ler.nextByte(); 
     System.out.printf("Digite a 2º nota: ");
     nota2 = ler.nextByte();
     System.out.printf("Digite a 3º nota: ");
@@ -24,6 +24,12 @@ public class Media {
 
     int resultado = (nota1 + nota2 + nota3 + nota4) / 4;
 
-    System.out.println("A média final é: " + resultado);
+    if(resultado <= 5){
+      System.out.println("A média final é " + resultado + " e está reprovado");
+    }else if (resultado > 5 && resultado <= 7){
+      System.out.println("A média final é " + resultado + " e está em recuperação");
+    }else{
+      System.out.println("A média final é " + resultado + " e está aprovado");
+    }
   }
 }
